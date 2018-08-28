@@ -193,8 +193,8 @@ for (std::size_t i = 0; accumulated_s < total_length; ++i) {
     // 计算纵向每个位置，有效的左右边界，kBoundaryBuff是无人车与车道线边界线的间距。需要保持无人车在车道内行驶。
     reference_line_.GetLaneWidth(s, &left_width, &right_width);
     constexpr float kBoundaryBuff = 0.20;
-    const float eff_right_width = right_width - half_adc_width - kBoundaryBuff;   // 计算右有效宽度
-    const float eff_left_width = left_width - half_adc_width - kBoundaryBuff;     // 计算左有效宽度
+    const float eff_right_width = right_width - half_adc_width - kBoundaryBuff;   // 右有效宽度 = 右车道宽 - 半车宽 - 边界缓冲
+    const float eff_left_width = left_width - half_adc_width - kBoundaryBuff;     // 左有效宽度 = 左车道宽 - 半车宽 - 边界缓冲
 
     float kDefaultUnitL = 1.2 / (num_sample_per_level - 1);  // 每个位置上横向采样时，采样点之间的距离，差不多0.2m
     if (reference_line_info_.IsChangeLanePath() &&           // 如果当前参考线是变道，且变道不安全(无人车前后一定距离内有障碍物)
