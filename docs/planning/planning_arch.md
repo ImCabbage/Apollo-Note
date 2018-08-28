@@ -98,3 +98,4 @@ RoadSegment类型包含了repeated Passage，这意味着，一个RoadSegment中
 
 最终的可视化结果如下图所示
 
+![](../../images/planning/routing_result.png)
