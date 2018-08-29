@@ -299,7 +299,7 @@ index_offset是该段拟合函数对应的参数位置，我们可以知道n段�
 - [2\*(spline_order+1)\*i， 2\*(spline_order+1)\*i+(spline_order+1)]是x多项式函数的参数，共(spline_order+1)个，即向量A；
 - [2\*(spline_order+1)\*i+(spline_order+1)， 2\*(spline_order+1)\*(i+1)]是y多项式函数的参数，共(spline_order+1)个，即向量B
 
-```
+```c++
 std::vector<double> longi_coef = AffineCoef(angle[i], rel_t);
 std::vector<double> longitudinal_coef = AffineCoef(angle[i] - M_PI / 2, rel_t);
 
@@ -408,7 +408,7 @@ affine_boundary(4 * i + 3, 0) = -d_longitudinal - longitudinal_bound[i];  //设�
 
 #### B.2 方向约束
 
-```
+```c++
 /// file in apollo/modules/planning/reference_line/qp_spline_reference_line_smoother.cc
 bool QpSplineReferenceLineSmoother::AddConstraint() {
   // the heading of the first point should be identical to the anchor point.
@@ -606,7 +606,7 @@ cost =
 $$
 </p>
 
-```
+```c++
 /// file in apollo/modules/planning/conf/qp_spline_smoother_config.pb.txt
 qp_spline {
   spline_order: 5
@@ -854,7 +854,7 @@ $$ cost = x^T * H_1 * x + x^T * H_2 * x $$
 - L1正则：$ fx $
 - L2正则：$ x^Tfx $
 
-```
+```c++
 qp_spline {
   spline_order: 5
   max_spline_length : 25.0
