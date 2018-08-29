@@ -299,7 +299,7 @@ index_offset是该段拟合函数对应的参数位置，我们可以知道n段�
 - [2\*(spline_order+1)\*i， 2\*(spline_order+1)\*i+(spline_order+1)]是x多项式函数的参数，共(spline_order+1)个，即向量A；
 - [2\*(spline_order+1)\*i+(spline_order+1)， 2\*(spline_order+1)\*(i+1)]是y多项式函数的参数，共(spline_order+1)个，即向量B
 
-```
+```c++
 std::vector<double> longi_coef = AffineCoef(angle[i], rel_t);
 std::vector<double> longitudinal_coef = AffineCoef(angle[i] - M_PI / 2, rel_t);
 
