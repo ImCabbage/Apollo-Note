@@ -881,7 +881,7 @@ void LaneSegment::Join(std::vector<LaneSegment>* segments) {
 
 1. Path::InitPointIndex函数计算每个采样点的上界MapPathPoint
 
-```
+```c++
 /// file in apollo/modules/map/pnc_map/path.cc
 void Path::InitPointIndex() {
   last_point_index_.clear();
