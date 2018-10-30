@@ -1,5 +1,7 @@
 # Apollo 2.0阅读笔记
 
+文档 Fork 自 YannZyl/Apollo-Note，根据个人阅读情况有改动和完善。
+
 本文档主要介绍Apollo 2.0软件平台，其中各个模块结构与功能的纤细介绍。文档的目录结构为：
 
 - [Apollo 2.0 软件结构简介](https://github.com/wolegechu/Apollo-Note/blob/master/docs/apollo_software_arch.md)
